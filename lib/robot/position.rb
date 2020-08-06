@@ -8,5 +8,21 @@ module Robot
       @point = point
       @direction = direction
     end
+
+    def north
+      self.class.new(point: point.north, direction: direction)
+    end
+
+    def south
+      self.class.new(point: point.north, direction: direction)
+    end
+
+    def east
+      self.class.new(point: point.north, direction: direction)
+    end
+
+    def west
+      self.class.new(point: point.north, direction: direction)
+    end
   end
 end
