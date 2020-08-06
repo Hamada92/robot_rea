@@ -8,7 +8,7 @@ module Robot
       end
 
       def self.call(position)
-        Robot::Rotate.(position: position, towards: Robot::DIRECTIONS::RIGHT)
+        position.right
       end
     end
   end

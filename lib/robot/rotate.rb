@@ -8,22 +8,7 @@ module Robot
 
       private
 
-      def options
-        {
-          LEFT: {
-            EAST:  :NORTH,
-            NORTH: :WEST,
-            WEST:  :SOUTH,
-            SOUTH: :EAST,
-          },
-          RIGHT: {
-            EAST:  :SOUTH,
-            SOUTH: :WEST,
-            WEST:  :NORTH,
-            NORTH: :EAST,
-          }
-        }.freeze
-      end
+
     end
   end
 end
