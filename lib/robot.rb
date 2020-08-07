@@ -6,5 +6,5 @@ require 'robot/directions'
 require 'robot/commands'
 
 module Robot
-  class Error < StandardError; end
+   class InvalidCommand < StandardError; end
 end

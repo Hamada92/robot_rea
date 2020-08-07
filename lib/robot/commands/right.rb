@@ -1,8 +1,10 @@
 module Robot
   module Commands
     class Right < Base
+      RIGHT = 'RIGHT'.freeze
+
       def self.matches?(command)
-        command.to_sym == Robot::Directions::RIGHT
+        command == RIGHT
       end
 
       def self.call(position)

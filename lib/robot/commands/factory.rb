@@ -3,14 +3,12 @@
 
 module Robot
   module Commands
+    COMMANDS = [Left, Right, Move, Place, Report]
+
     class Factory
-      class InvalidCommand < StandardError; end
-
-      COMMANDS = [LEFT, RIGHT, MOVE, PLACE, REPORT]
-
       def self.build(command)
-        command_klass = COMMANDS.select { |klass| klass.matches?(command) }
-        command_klass || InvalidCommand.new
+        command_klass = COMMANDS.detect { |klass| klass.matches?(command) }
+        command_klass or raise Robot::InvalidCommand.new
       end
     end
   end

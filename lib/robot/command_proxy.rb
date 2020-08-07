@@ -6,21 +6,21 @@ module Robot
 
     attr_reader :command, :position
 
-    def initialize(command:, position:)
+    def initialize(command:, position:, max_point:)
       @command = command
-      @position = position
+      @robot = robot
     end
 
     def call
-      return unless position
-      @command.(@position)
+      prevent_falling
+      command.(position)
     end
 
     private
 
     def prevent_falling
-      return unless command.is_a(Robot::Move)
       new_position = call
+      return if new_position.point > max_point
     end
   end
 end

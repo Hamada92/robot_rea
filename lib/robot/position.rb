@@ -10,27 +10,27 @@ module Robot
     end
 
     def north
-      self.class.new(point: point.north, direction: direction)
+      Position.new(point: point.north, direction: direction)
     end
 
     def south
-      self.class.new(point: point.south, direction: direction)
+      Position.new(point: point.south, direction: direction)
     end
 
     def east
-      self.class.new(point: point.east, direction: direction)
+      Position.new(point: point.east, direction: direction)
     end
 
     def west
-      self.class.new(point: point.west, direction: direction)
+      Position.new(point: point.west, direction: direction)
     end
 
     def left
-      self.class.new(point: point, direction: left_options[direction] )
+      Position.new(point: point, direction: lefts[direction] )
     end
 
     def right
-      self.class.new(point: point, direction: right_options[direction] )
+      Position.new(point: point, direction: rights[direction] )
     end
 
     def ==(position)
@@ -39,7 +39,7 @@ module Robot
 
     private
 
-    def left_options
+    def lefts
       {
         Robot::Directions::EAST  => Robot::Directions::NORTH,
         Robot::Directions::NORTH => Robot::Directions::WEST,
@@ -48,7 +48,7 @@ module Robot
       }.freeze
     end
 
-    def right_options
+    def rights
       {
         Robot::Directions::EAST  => Robot::Directions::SOUTH,
         Robot::Directions::SOUTH => Robot::Directions::WEST,

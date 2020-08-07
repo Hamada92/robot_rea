@@ -1,10 +1,10 @@
 module Robot
   module Commands
     class Move < Base
-      MOVE = 'Move'.freeze
+      MOVE = 'MOVE'.freeze
 
       def self.matches?(command)
-        command.to_sym == MOVE
+        command == MOVE
       end
 
       def self.call(position)

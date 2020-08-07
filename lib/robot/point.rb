@@ -10,23 +10,27 @@ module Robot
     end
 
     def north
-      self.class.new(x: x, y: y + 1)
+      Point.new(x: x, y: y + 1)
     end
 
     def south
-      self.class.new(x: x, y: y - 1)
+      Point.new(x: x, y: y - 1)
     end
 
     def east
-      self.class.new(x: x + 1, y: y)
+      Point.new(x: x + 1, y: y)
     end
 
     def west
-      self.class.new(x: x - 1, y: y)
+      Point.new(x: x - 1, y: y)
     end
 
     def ==(point)
       x == point.x && y == point.y
+    end
+
+    def >(point)
+      x > point.x || y > point.y
     end
   end
 end
