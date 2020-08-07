@@ -10,7 +10,7 @@ module Robot
 
       def self.build(command)
         command_klass = COMMANDS.select { |klass| klass.matches?(command) }
-        command_klass
+        command_klass || InvalidCommand.new
       end
     end
   end

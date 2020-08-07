@@ -1,8 +1,6 @@
-require 'robot/step'
-
 module Robot
   module Commands
-    class Move
+    class Move < Base
       MOVE = 'Move'.freeze
 
       def self.matches?(command)
@@ -10,7 +8,7 @@ module Robot
       end
 
       def self.call(position)
-        Step.(position: position)
+        Forward.(position: position)
       end
     end
   end

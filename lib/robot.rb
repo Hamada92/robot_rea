@@ -1,8 +1,8 @@
 require "robot/version"
 require 'robot/point'
 require 'robot/position'
+require 'robot/forward'
 require 'robot/directions'
-require 'robot/rotate'
 require 'robot/commands'
 
 module Robot

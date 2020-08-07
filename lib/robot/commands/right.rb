@@ -1,5 +1,3 @@
-require_relative '../rotate'
-
 module Robot
   module Commands
     class Right < Base
