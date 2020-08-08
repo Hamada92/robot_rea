@@ -8,7 +8,12 @@ module Robot
       end
 
       def self.call(position)
-        Forward.(position: position)
+        {
+          Robot::Directions::NORTH => position.north,
+          Robot::Directions::SOUTH => position.south,
+          Robot::Directions::EAST  => position.east,
+          Robot::Directions::WEST  => position.west,
+        }.fetch(position.direction)
       end
     end
   end
