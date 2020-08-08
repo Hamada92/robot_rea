@@ -13,5 +13,4 @@ module Robot
     Robot::CommandProxy.new(command_string: n).()
   end
 
-
 end
