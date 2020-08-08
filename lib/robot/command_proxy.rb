@@ -1,6 +1,6 @@
 # This class implements the proxy design pattern. It sits between the client and the commands,
 # and only invokes the command if it passes validation.
-
+require 'byebug'
 module Robot
   class CommandProxy
 
@@ -29,6 +29,7 @@ module Robot
     end
 
     def command_class
+      byebug
       Robot::Commands::Factory.build(command_string)
     rescue Robot::InvalidCommand => e
       puts "#{command_string} is not a valid command, please enter a valid command"
