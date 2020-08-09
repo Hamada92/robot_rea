@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module Robot
   module Commands
     class Report < Base
-      REPORT = 'REPORT'.freeze
+      REPORT = 'REPORT'
 
       def self.matches?(command)
         command == REPORT

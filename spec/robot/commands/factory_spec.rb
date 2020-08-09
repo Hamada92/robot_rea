@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Robot::Commands::Factory do
-
   context 'when command is PLACE 0,1,NORTH' do
     it 'returns the place command class' do
       command_string = 'PLACE 0,1,NORTH'
@@ -23,7 +24,7 @@ describe Robot::Commands::Factory do
     end
   end
 
-   context 'when command is REPORT' do
+  context 'when command is REPORT' do
     it 'returns the report command class' do
       command_string = 'REPORT'
       expect(described_class.build(command_string)).to eq(Robot::Commands::Report)

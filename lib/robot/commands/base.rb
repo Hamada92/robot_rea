@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
 module Robot
   module Commands
+    # Command Base/Interface
     class Base
-      def self.matches(command)
+      def self.matches(_command)
         raise NotImplementedError, "#{self.class} has not implemented method '#{__method__}'"
       end
 

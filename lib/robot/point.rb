@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Point value object
 
 module Robot
@@ -25,16 +27,16 @@ module Robot
       Point.new(x: x - 1, y: y)
     end
 
-    def ==(point)
-      x == point.x && y == point.y
+    def ==(other)
+      x == other.x && y == other.y
     end
 
-    def >(point)
-      x > point.x || y > point.y
+    def >(other)
+      x > other.x || y > other.y
     end
 
-    def <(point)
-      x < point.x || y < point.y
+    def <(other)
+      x < other.x || y < other.y
     end
 
     def to_s

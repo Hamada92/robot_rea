@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module Robot
   module Commands
     class Move < Base
-      MOVE = 'MOVE'.freeze
+      MOVE = 'MOVE'
 
       def self.matches?(command)
         command == MOVE
@@ -11,8 +13,8 @@ module Robot
         {
           Robot::Directions::NORTH => position.north,
           Robot::Directions::SOUTH => position.south,
-          Robot::Directions::EAST  => position.east,
-          Robot::Directions::WEST  => position.west,
+          Robot::Directions::EAST => position.east,
+          Robot::Directions::WEST => position.west
         }.fetch(position.direction)
       end
     end

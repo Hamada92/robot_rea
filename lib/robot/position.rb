@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Position value object
 
 module Robot
@@ -26,15 +28,15 @@ module Robot
     end
 
     def left
-      Position.new(point: point, direction: lefts[direction] )
+      Position.new(point: point, direction: lefts[direction])
     end
 
     def right
-      Position.new(point: point, direction: rights[direction] )
+      Position.new(point: point, direction: rights[direction])
     end
 
-    def ==(position)
-      point == position.point && direction == position.direction
+    def ==(other)
+      point == other.point && direction == other.direction
     end
 
     def to_s
@@ -45,22 +47,20 @@ module Robot
 
     def lefts
       {
-        Robot::Directions::EAST  => Robot::Directions::NORTH,
+        Robot::Directions::EAST => Robot::Directions::NORTH,
         Robot::Directions::NORTH => Robot::Directions::WEST,
-        Robot::Directions::WEST  => Robot::Directions::SOUTH,
-        Robot::Directions::SOUTH => Robot::Directions::EAST,
+        Robot::Directions::WEST => Robot::Directions::SOUTH,
+        Robot::Directions::SOUTH => Robot::Directions::EAST
       }.freeze
     end
 
     def rights
       {
-        Robot::Directions::EAST  => Robot::Directions::SOUTH,
+        Robot::Directions::EAST => Robot::Directions::SOUTH,
         Robot::Directions::SOUTH => Robot::Directions::WEST,
-        Robot::Directions::WEST  => Robot::Directions::NORTH,
-        Robot::Directions::NORTH => Robot::Directions::EAST,
+        Robot::Directions::WEST => Robot::Directions::NORTH,
+        Robot::Directions::NORTH => Robot::Directions::EAST
       }.freeze
     end
   end
 end
-
-

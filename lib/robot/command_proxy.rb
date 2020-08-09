@@ -1,9 +1,10 @@
-# This class implements the proxy design pattern. It sits between the client and the commands,
-# and only invokes the command if it passes validation.
-module Robot
-  class CommandProxy
+# frozen_string_literal: true
 
-    attr_reader :command_string, :position, :min_point, :max_point
+module Robot
+  # This class implements the proxy design pattern. It sits between the client and the commands,
+  # and only invokes the command if it passes validation.
+  class CommandProxy
+    attr_reader :command_string, :position
 
     def initialize(command_string:, position: nil)
       @command_string = command_string
@@ -23,7 +24,7 @@ module Robot
       if place_command?
         command_class.build_from_string_command(command_string)
       else
-        command_class.(position)
+        command_class.call(position)
       end
     end
 
@@ -33,6 +34,7 @@ module Robot
 
     def would_fall?
       return unless [Robot::Commands::Move, Robot::Commands::Place].include?(command_class)
+
       new_position = execute
       new_position.point > table.max_point || new_position.point < table.min_point
     end

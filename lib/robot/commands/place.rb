@@ -1,10 +1,13 @@
+# frozen_string_literal: true
+
 module Robot
   module Commands
+    # Place Command
+
     class Place < Base
       extend PlaceCommandParser
 
-      REGEX = /^\A(PLACE) \d,\d,(NORTH|EAST|WEST|SOUTH)\z/
-
+      REGEX = /^\A(PLACE) \d,\d,(NORTH|EAST|WEST|SOUTH)\z/.freeze
 
       def self.matches?(command)
         command =~ REGEX

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'yaml'
 
 module Robot
@@ -24,23 +26,23 @@ module Robot
     end
 
     def root
-      File.expand_path('../../../', __FILE__)
+      File.expand_path('../..', __dir__)
     end
 
     def minimum_x
-      config_file["min_x"]
+      config_file['min_x']
     end
 
     def minimum_y
-      config_file["min_y"]
+      config_file['min_y']
     end
 
     def maximum_x
-      config_file["max_x"]
+      config_file['max_x']
     end
 
     def maximum_y
-      config_file["max_y"]
+      config_file['max_y']
     end
   end
 end

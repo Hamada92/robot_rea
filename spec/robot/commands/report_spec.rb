@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Robot::Commands::Report do
@@ -7,6 +9,6 @@ describe Robot::Commands::Report do
   end
 
   it 'prints the position to stdout' do
-    expect { described_class.(position)}.to output("0, 0, NORTH\n").to_stdout
+    expect { described_class.call(position) }.to output("0, 0, NORTH\n").to_stdout
   end
 end

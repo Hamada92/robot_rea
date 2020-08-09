@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Robot::Point do
@@ -26,5 +28,4 @@ describe Robot::Point do
       expect(point.west).to eq(Robot::Point.new(x: -1, y: 0))
     end
   end
-
 end

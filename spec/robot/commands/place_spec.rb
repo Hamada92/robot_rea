@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Robot::Commands::Place do
@@ -7,7 +9,7 @@ describe Robot::Commands::Place do
   end
 
   context '.call' do
-    subject { described_class.(x: 0, y: 0, f: Robot::Directions::NORTH) }
+    subject { described_class.call(x: 0, y: 0, f: Robot::Directions::NORTH) }
     it { is_expected.to be_a(Robot::Position) }
     it { is_expected.to eq(position) }
   end
@@ -17,5 +19,4 @@ describe Robot::Commands::Place do
     it { is_expected.to be_a(Robot::Position) }
     it { is_expected.to eq(position) }
   end
-
 end

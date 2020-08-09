@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module Robot
   module Commands
     class Right < Base
-      RIGHT = 'RIGHT'.freeze
+      RIGHT = 'RIGHT'
 
       def self.matches?(command)
         command == RIGHT
