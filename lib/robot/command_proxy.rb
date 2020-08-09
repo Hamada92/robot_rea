@@ -5,12 +5,9 @@ module Robot
 
     attr_reader :command_string, :position, :min_point, :max_point
 
-    def initialize(command_string:, position: nil, max_point: Point.new(x: 4, y: 4),
-                    min_point: Point.new(x: 0, y: 0))
+    def initialize(command_string:, position: nil)
       @command_string = command_string
       @position = position
-      @min_point = min_point
-      @max_point = max_point
     end
 
     def call
@@ -37,7 +34,11 @@ module Robot
     def would_fall?
       return unless [Robot::Commands::Move, Robot::Commands::Place].include?(command_class)
       new_position = execute
-      new_position.point > max_point || new_position.point < min_point
+      new_position.point > table.max_point || new_position.point < table.min_point
+    end
+
+    def table
+      @table ||= Robot::Table.new
     end
 
     def not_placed_yet?

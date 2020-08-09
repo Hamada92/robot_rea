@@ -13,7 +13,7 @@ module Robot
       end
     end
 
-    def self.call(input)
+    def self.call(input: $stdin)
       game = new(input: input)
       game.simulate
     end
