@@ -9,7 +9,8 @@ module Robot
    class InvalidCommand < StandardError; end
 
   def self.run
-    n = gets
+    n = gets.chomp
+    puts n
     Robot::CommandProxy.new(command_string: n).()
   end
 

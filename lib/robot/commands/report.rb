@@ -8,7 +8,8 @@ module Robot
       end
 
       def self.call(position)
-        position.right
+        puts position
+        position
       end
     end
   end
