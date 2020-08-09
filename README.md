@@ -24,3 +24,6 @@ REPORT
 LEFT
 REPORT
 ```
+
+To configure the table size, update the file `config.yaml`
+
