@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "robot/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "robot"
+  spec.name          = "robot_rea"
   spec.version       = Robot::VERSION
   spec.authors       = ["Anonymous"]
   spec.email         = ["a@a.com"]

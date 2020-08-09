@@ -11,5 +11,4 @@ module Robot
   def self.run
     Game.()
   end
-
 end
