@@ -10,6 +10,6 @@ describe Robot::Game do
   }
 
   it 'works' do
-    expect{ described_class.(StringIO.new(input)) }.to output("0, 1, NORTH\n").to_stdout
+    expect{ described_class.(input: StringIO.new(input)) }.to output("0, 1, NORTH\n").to_stdout
   end
 end
