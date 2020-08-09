@@ -32,5 +32,13 @@ module Robot
     def >(point)
       x > point.x || y > point.y
     end
+
+    def <(point)
+      x < point.x || y < point.y
+    end
+
+    def to_s
+      "#{x}, #{y}"
+    end
   end
 end

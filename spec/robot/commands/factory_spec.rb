@@ -31,9 +31,9 @@ describe Robot::Commands::Factory do
   end
 
   context 'when command is invalid' do
-    it 'raises an InvalidCommand exception' do
+    it 'returns a no op command' do
       command_string = 'PLAY'
-      expect { described_class.build(command_string) }.to raise_error(Robot::InvalidCommand)
+      expect(described_class.build(command_string)).to eq(Robot::Commands::NoOp)
     end
   end
 end

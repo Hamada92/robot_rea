@@ -37,6 +37,10 @@ module Robot
       point == position.point && direction == position.direction
     end
 
+    def to_s
+      "#{point}, #{direction}"
+    end
+
     private
 
     def lefts

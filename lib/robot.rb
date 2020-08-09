@@ -4,14 +4,12 @@ require 'robot/position'
 require 'robot/directions'
 require 'robot/commands'
 require 'robot/command_proxy'
+require 'robot/table'
+require 'robot/game'
 
 module Robot
-   class InvalidCommand < StandardError; end
-
   def self.run
-    n = gets.chomp
-    puts n
-    Robot::CommandProxy.new(command_string: n).()
+    Game.()
   end
 
 end
