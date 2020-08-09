@@ -9,7 +9,7 @@ describe Robot::Game do
     INPUT
   }
 
-  it 'works' do
+  it 'applies the commands and reports the position to stdout' do
     expect{ described_class.(input: StringIO.new(input)) }.to output("0, 1, NORTH\n").to_stdout
   end
 end
