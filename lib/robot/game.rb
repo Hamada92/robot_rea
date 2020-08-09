@@ -15,18 +15,19 @@ module Robot
 
     def self.call(input: $stdin)
       game = new(input: input)
-      game.simulate
       instruction
+      game.simulate
     end
 
     def self.instruction
-      puts <<~HEREDOC
+      puts  <<~HEREDOC
         Welcome to the Robot game
         Please enter one of the following commands:
         PLACE 0,0,NORTH (PLACE X,Y,DIRECTION)
         MOVE
         LEFT
         RIGHT
+        REPORT
 
         invalid commands are ignored.
         You must start with a place command.
