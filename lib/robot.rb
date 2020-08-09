@@ -11,7 +11,7 @@ require 'robot/game'
 
 module Robot
   def self.run
-    Game.call
+    Game.()
     instructions
   end
 

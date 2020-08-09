@@ -24,7 +24,7 @@ module Robot
       if place_command?
         command_class.build_from_string_command(command_string)
       else
-        command_class.call(position)
+        command_class.(position)
       end
     end
 
