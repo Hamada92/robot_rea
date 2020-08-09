@@ -10,10 +10,8 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{robot simulation}
   spec.description   = %q{robot simulation}
-  spec.homepage      = "http://test.com"
+  spec.homepage      = "http://rubygems.org/gems/robot_rea"
   spec.license       = "MIT"
-
-  spec.metadata["allowed_push_host"] = 'http://mygemserver.com'
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "http://test.com"
