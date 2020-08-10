@@ -25,7 +25,6 @@ LEFT
 REPORT
 ```
 
-To configure the table size, update the file `config.yaml`
 
 To run the specs, clone the repo then run `bundle exec rspec`
 
